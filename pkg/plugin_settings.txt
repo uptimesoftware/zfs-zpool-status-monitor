@@ -1,0 +1,8 @@
+name=ZFS Status Monitor
+version=2.0
+platforms=windows linux solaris
+description=Monitor the status of a ZFS file system.
+restartCore=false
+requiresAgentScript=true
+onUpgradeRemoveFiles=true
+onUpgradeRemoveMonitors=false

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uptime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.uptimesoftware.com/erdc/erdc erdc"
+	xmlns="http://www.uptimesoftware.com/erdc/erdc"
+	xmlns:upt="http://www.uptimesoftware.com/erdc/erdc" version="4.0" target_grouping="other">
+	<class>ZFS Status Monitor</class>
+	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
+	<elements>
+		<element name="process" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+			<control_options> size:40 </control_options>
+			<default_value>scripts/MonitorZFSStatus/zfs_status.sh</default_value>
+			<short_description>Local Script Name</short_description>
+			<long_description>Name of the script/binary/process to be executed by up.time </long_description>
+			<validation_rule>
+				<alphanumeric/>
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name='port' parameter_type='input' data_type='integer'
+		gui_basic='1' range_type='0' units=''>
+			<control_options>size:8</control_options>
+			<default_value>9998</default_value>
+			<short_description>Agent Port</short_description>
+			<long_description>up.time Agent Port (default is 9998)</long_description>
+			<validation_rule/>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<integer/>
+			</gui_type>
+		</element>
+		<element name="remote_script" parameter_type="input" data_type="string" gui_basic="1" range_type="0">
+			<control_options> size:40 </control_options>
+			<default_value>/opt/uptime-agent/scripts/zfs_status_agent.pl</default_value>
+			<short_description>Remote ZFS Script Name</short_description>
+			<long_description>Name of the ZFS Status script residing on the remote Solaris server </long_description>
+			<validation_rule>
+				<alphanumeric/>
+			</validation_rule>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name='password' parameter_type='input' data_type='string'
+		gui_basic='1' range_type='0' units=''>
+			<control_options>size:8</control_options>
+			<default_value></default_value>
+			<short_description>up.time Agent Password</short_description>
+			<long_description>Password setup on the agent system</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<password/>
+			</gui_type>
+		</element>
+		<element name='pool' parameter_type='input' data_type='string'
+		gui_basic='1' range_type='0' units=''>
+			<control_options>size:8</control_options>
+			<default_value></default_value>
+			<short_description>ZFS Pool</short_description>
+			<long_description>ZFS Pool Name (used in zpool status command)</long_description>
+			<validation_rule/>
+			<error_message>
+				<alphanumeric>required field</alphanumeric>
+			</error_message>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+		<element name='custom1' parameter_type='output' data_type='string'
+		gui_basic='1' range_type='0' units=''>
+			<control_options>size:8</control_options>
+			<default_value></default_value>
+			<short_description>Output</short_description>
+			<long_description>Output from the script</long_description>
+			<validation_rule/>
+			<error_message/>
+			<gui_type>
+				<string/>
+			</gui_type>
+		</element>
+	</elements>
+	<help>When running a custom script check, note that the second parameter is always the name of the assigned host.
+	The script that's executed should output each variable on it's own line, otherwise up.time won't be able to capture the appropriate information.</help>
+</uptime>

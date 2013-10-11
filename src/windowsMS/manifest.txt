@@ -1,0 +1,7 @@
+platform: windows
+dependencies: php agent perl
+definition-xml: MonitorZFSStatus.xml
+executable: zfs_status.bat
+executable: rcs.php
+support-file: readme.txt
+readme: readme.txt
