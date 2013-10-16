@@ -7,13 +7,13 @@ See http://uptimesoftware.github.io for more information.
 
 ### Category
 
-{ page.category }}
+plugin
 
 ### Version Compatibility
 
 
   
-    * ZFS ZPool Status Monitor 2.0 - 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
+* ZFS ZPool Status Monitor 2.0 - 7.1, 7.0, 6.0, 5.5, 5.4, 5.3, 5.2
   
 
 
@@ -37,12 +37,27 @@ Solaris, Linux, AIX
 
 
 ### Input Variables
-* agent port (9998)* agent password* agent remote script* ZFS pool (pool to monitor)
+
+* agent port (9998)
+
+* agent password
+
+* agent remote script
+
+* ZFS pool (pool to monitor)
+
 
 ### Output Variables
 
+
 * will display either an "OK" or "CRITICAL..." with info on the issue
 
+
 ### Languages Used
-* Shell/Batch* PHP* Perl
+
+* Shell/Batch
+
+* PHP
+
+* Perl
 
