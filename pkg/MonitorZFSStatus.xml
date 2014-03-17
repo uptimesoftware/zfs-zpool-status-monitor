@@ -6,8 +6,8 @@
 	<class>ZFS Status Monitor</class>
 	<exec>com.uptimesoftware.uptime.erdc.MonitorCustomScriptRunner</exec>
 	<erdc_version>2.1</erdc_version>
-    <category>Storage Monitors</category>
-    <category_related>Network Device Monitors</category_related>
+    <category>Operating System Monitors</category>
+    <category_related>Storage Monitors</category_related>
     <grid_info>
         <supported_versions>7.3</supported_versions>
         <supported_platforms>windows, linux</supported_platforms>
@@ -113,6 +113,5 @@
 			</gui_type>
 		</element>
 	</elements>
-	<help>When running a custom script check, note that the second parameter is always the name of the assigned host.
-	The script that's executed should output each variable on it's own line, otherwise up.time won't be able to capture the appropriate information.</help>
+	<help>Monitors ZPool errors and, if any are found, will display info on which disks are affecting the ZPool.</help>
 </uptime>
